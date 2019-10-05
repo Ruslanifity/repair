@@ -2,26 +2,31 @@
     padding: 50px 0
     &-block
         display: flex
+        justify-content: space-between
     &-text
-            flex-basis: 50%
+            flex-basis: 45%
             padding-right: 140px
+            max-width: 300px
         &__title
-            font-size: 41px
-            font-weight: 400
+            font-size: 40px
             line-height: 55px
-            padding-bottom: 40px
+            padding-bottom: 13px
+            +bold
+            max-width: 500px
         &__subtitle
             display: inline-block
             font-size: 20px
-            font-weight: 40px
-            margin-bottom: 70px
+            +bold
+            margin-bottom: 67px
     &-list
         margin: 0
         padding: 0
         &__item
             display: flex
-            margin-bottom: 30px
+            margin-bottom: 25px
             align-items: center
+            +bold
+            line-height: 24px
         &__image
             width: 40px
             height: 40px
@@ -33,17 +38,27 @@
             margin-right: 25px
         &__text
             max-width: 300px
-@media (max-width: 1200px)
+            padding-left: 4px
+            font-size: 14px
+    &-image
+        width: 570px
+        height: 488px
+        // box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)
+
+@media (max-width: 1200px) 
+    .hero
+        &-text
+            &__title 
+                font-size: 24px
+                line-height: 25px
+            &__subtitle
+                font-size: 18px
+                padding-top: 20px
+                      
+@media (max-width: 768px)
     .hero
         &-block
             flex-direction: column
-        &-list
-            margin-bottom: 44px
-        &-text 
-            padding-right: 10px
-@media (max-width: 768px)
-    .hero
-        &-text 
             &__title
                 font-size: 24px
                 line-height: 1.4
@@ -55,8 +70,10 @@
             &__item
                 margin-bottom: 20px
             &__text
-                font-size: 12px 
+                font-size: 12px
             &__image
                 margin-right: 15px
+        
+        
 
         
