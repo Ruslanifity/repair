@@ -14,11 +14,31 @@ img
 @media (max-width: 768px)
         .container
             max-width: 580px
-            width: 90%  
+            width: 90%
+@media (max-width: 567px)
+        .container
+            width: 270px
 .button
     border-radius: 10px
     background-color: $main-color
     border: none
     padding: 18px 30px
     +bold
-    
+    &:hover
+        background-color: lighten($main-color, 10% )
+        cursor: pointer
+.section
+    padding: 90px 0
+    &-title
+        font-size: 24px
+        +bold
+        margin-bottom: 24px
+    &-subtitle
+        display: block
+        font-size: 16px
+        margin-bottom: 30px
+.input
+    border: 1px solid $barder-input
+    padding: 20px 26px
+    font-size: 15px
+    border-radius: 10px
