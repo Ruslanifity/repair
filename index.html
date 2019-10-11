@@ -75,7 +75,10 @@
     <!-- main-herro -->
 
     <div class="modal" id="modal">
+
         <div class="modal-dialog">
+            <button class="modal-dialog__close" id="close">
+                &times;</button>
             <h4 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону!</h4>
             <span class="modal-dialog__subtitle">
                 Заполните поля ниже - мы свяжемся с Вами
@@ -84,11 +87,7 @@
                 <input type="text" class="input modal-dialog__input" placeholder="Ваше имя">
                 <input type="tell" class="input modal-dialog__input" placeholder="Ваш телефон">
             </form>
-
-
-            <button class="button modal-dialog__close" id="close">Узнать стоимость
-                &times;
-            </button>
+            <button class="button modal-dialog__button">Узнать стоимость</button>
             <span class="modal-dialog__text">Или Вы можете перезвонить нам сами по телефону:</span>
             <span class="modal-dialog__phone">+7 (8182) 42-51-31</span>
         </div>
@@ -118,8 +117,10 @@
     </section>
     <!-- offer -->
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
