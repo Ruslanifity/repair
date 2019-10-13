@@ -1,0 +1,19 @@
+
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel button.owl-dot {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit; 
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @media (max-width:567px) {
+    .owl-theme .owl-nav {
+      margin-top: 17px;
+    }
+  }
+    
+ 

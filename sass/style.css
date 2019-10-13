@@ -1,10 +1,103 @@
+@import c:\projects\repair\repair\sass\blocks\_hero.sass sss;
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
   width: 1170px;
   margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 580px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    width: 277px;
+  }
+}
+
+.button {
+  border-radius: 10px;
+  background-color: #ffd200;
+  border: none;
+  padding: 18px 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #ffdb33;
+  cursor: pointer;
+}
+
+.section {
+  padding: 61px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: -5px;
+}
+
+.input {
+  border: 1px solid #dddddd;
+  padding: 20px 26px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 20px 26px 27px 20px;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #ffd200;
 }
 
 .navbar {
@@ -23,9 +116,337 @@ body {
           align-items: center;
 }
 
-.navbar-navbar__info {
+.navbar__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+}
+
+.navbar__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 13px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: -7px;
+}
+
+.navbar__button {
+  margin-left: 30px;
+  padding: 19px 30px 16px 21px;
+  font-size: 14px;
+}
+
+.navbar__phone {
+  display: inline-block;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 10px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .navbar__contacts {
+    display: none;
+  }
+  .navbar__button {
+    font-size: 12px;
+    padding: 15px 26px;
+  }
+  .navbar__logo {
+    width: 90px;
+  }
+}
+
+@media (max-width: 567px) {
+  .navbar__button {
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 16px 24px 12px 27px;
+    margin-bottom: 6px;
+  }
+}
+
+.offer {
+  background: url("../img/offer-bg.png") no-repeat;
+  background-size: contain;
+  background-position: center right;
+  position: relative;
+}
+
+.offer:before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.offer-block {
+  width: 50%;
+  padding-right: 90px;
+  position: relative;
+}
+
+.offer__title {
+  max-width: 360px;
+  line-height: 35px;
+  margin-bottom: 24px;
+  margin-top: 14px;
+  text-align: left;
+}
+
+.offer__subtitle {
+  max-width: 250px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.offer__input {
+  margin-bottom: 30px;
+  width: 240px;
+  margin-right: 5px;
+}
+
+.offer__button {
+  width: 100%;
+  min-height: 70px;
+}
+
+.offer-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+.offer__offering {
+  max-width: 230px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #333333;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-left: -3px;
+  margin-top: 1px;
+}
+
+.offer-phone {
+  margin-right: 11px;
+}
+
+.offer__phone {
+  display: block;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 4px;
+  margin-left: -2px;
+}
+
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover;
+  }
+  .offer__input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .offer__button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    background: #fff;
+  }
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 567px) {
+  .offer-block {
+    margin-top: 40px;
+  }
+  .offer__title {
+    margin-top: -55px;
+    font-size: 18px;
+    line-height: 1.3;
+    max-width: 268px;
+  }
+  .offer__subtitle {
+    font-size: 14px;
+    margin-top: -8px;
+  }
+  .offer__input {
+    width: 275px;
+    height: 65px;
+    margin-top: -3px;
+  }
+  .offer__button {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1;
+    width: 275px;
+    height: 70px;
+  }
+  .offer-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 24px;
+    margin-left: 6px;
+  }
+  .offer__offering {
+    font-size: 15px;
+    max-width: 240px;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    margin-top: -2px;
+    padding-left: 1px;
+  }
+  .offer-phone {
+    margin-top: 10px;
+  }
+  .offer__phone {
+    margin-top: 5px;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-dialog__title {
+  font-size: 22px;
+  line-height: 33px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.modal-dialog__subtitle {
+  display: block;
+  font-size: 16px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.modal-dialog__form {
+  margin-top: 50px;
+}
+
+.modal-dialog__input {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.modal-dialog__button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 25px 30px;
+}
+
+.modal-dialog__text {
+  font-size: 15px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.modal-dialog__phone {
+  font-size: 24px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+@media (max-width: 567px) {
+  .modal-dialog__title {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .modal-dialog__subtitle {
+    font-size: 13px;
+  }
+  .modal-dialog__form {
+    margin-top: 20px;
+  }
+  .modal-dialog__input {
+    padding: 15px;
+  }
+  .modal-dialog__button {
+    padding: 17px;
+  }
+  .modal-dialog__text {
+    font-size: 11px;
+  }
+  .modal-dialog__phone {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
