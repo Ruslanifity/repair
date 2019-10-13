@@ -400,6 +400,61 @@ img {
     font-size: 11px; }
   .modal-dialog__phone {
     font-size: 18px; } }
+.step {
+  flex-basis: 20%;
+  text-align: center;
+  position: relative; }
+  .step::after {
+    content: "";
+    width: 72px;
+    height: 25px;
+    position: absolute;
+    background: url("../img/arrow-steps.png") no-repeat center;
+    top: -10px;
+    right: -15%; }
+  .step:last-child:after {
+    display: none; }
+  .step__image {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ffd200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 30px; }
+  .step__text {
+    font-size: 14px;
+    max-width: 160px;
+    margin: auto;
+    font-family: 'Museo Sans Bold', sans-serif;
+    font-weight: 700; }
+  .steps-block {
+    display: flex; }
+  .steps__title {
+    margin: auto;
+    max-width: 540px;
+    margin-bottom: 59px; }
+  .steps__subtitle {
+    text-align: center;
+    margin-bottom: 59px; }
+
+@media (max-width: 1200px) {
+  .step {
+    margin-bottom: 30px;
+    flex-basis: 50%; }
+    .step:after {
+      display: none; }
+    .steps-block {
+      justify-content: center; } }
+@media (max-width: 768px) {
+  .step {
+    margin-bottom: 30px; }
+    .step:after {
+      display: none; }
+    .steps-block {
+      flex-direction: column; } }
 .portfolio {
   background: #f5f5f5 url("../img/pattern.jpg") center left repeat-y;
   background-size: 50%; }
